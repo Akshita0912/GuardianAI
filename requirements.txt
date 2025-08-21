@@ -1,0 +1,13 @@
+tensorflow
+keras
+opencv-python
+numpy
+scipy
+pandas
+matplotlib
+librosa
+sounddevice
+fer
+moviepy
+tkintertable
+requests
