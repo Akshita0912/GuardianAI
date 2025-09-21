@@ -6,18 +6,15 @@ def send_alert(face_emotion, speech_emotion):
 
     print("[ALERT SYSTEM] Sending alerts...")
 
-    # Send to emergency contacts
     for contact in EMERGENCY_CONTACTS:
         print(f"📱 Notifying {contact['name']} ({contact['phone']}) -> {message}")
 
-    # Send to hospital API
     try:
         requests.post(HOSPITAL_API, json={"message": message, "location": LOCATION})
         print("🏥 Hospital notified")
     except:
         print("⚠️ Failed to notify hospital")
 
-    # Send to police API
     try:
         requests.post(POLICE_API, json={"message": message, "location": LOCATION})
         print("🚔 Police notified")
