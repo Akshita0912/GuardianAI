@@ -3,7 +3,6 @@ import librosa
 import tensorflow as tf
 import os
 
-# Load pre-trained speech emotion model
 MODEL_PATH = "models/speech_emotion_model.h5"
 if os.path.exists(MODEL_PATH):
     model = tf.keras.models.load_model(MODEL_PATH)
